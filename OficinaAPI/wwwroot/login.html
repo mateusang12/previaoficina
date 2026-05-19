@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Administrativo - Oficina dos Anjos</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <form id="loginForm" class="login-form">
+            <h2>Oficina dos Anjos</h2>
+            <h3>Acesso Restrito - Admin</h3>
+            <div class="input-group">
+                <label>E-mail</label>
+                <input type="email" id="email" required placeholder="admin@oficina.com">
+            </div>
+            <div class="input-group">
+                <label>Senha</label>
+                <input type="password" id="senha" required placeholder="••••••••">
+            </div>
+            <button type="submit" class="btn-login">Entrar no Painel</button>
+            <p id="mensagemErro" class="error-message"></p>
+            <a href="index.html" style="display:block; text-align:center; margin-top:15px; color:#7f8c8d; text-decoration:none;">Voltar para Home</a>
+        </form>
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oficina dos Anjos - Agendamento</title>
+    <link rel="stylesheet" href="css/agendamento.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Oficina dos Anjos</div>
+        <a href="index.html" class="menu-item login-btn">Voltar para Home</a>
+    </header>
+
+    <div class="form-page-container">
+        <form id="formAgendamento" class="agendamento-form">
+            <h2>Agende sua Revisão</h2>
+
+            <div class="form-row">
+                <div class="input-group">
+                    <label>Nome Completo</label>
+                    <input type="text" id="nome" required placeholder="Digite seu nome">
+                </div>
+                <div class="input-group">
+                    <label>CPF</label>
+                    <input type="text" id="cpf" required placeholder="000.000.000-00">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>E-mail</label>
+                <input type="email" id="email" required placeholder="seu@email.com">
+            </div>
+
+            <div class="input-group">
+                <label>Tipo de Serviço</label>
+                <select id="servico" required>
+                    <option value="">Selecione o serviço...</option>
+                    <option>Revisão Geral Preventiva</option>
+                    <option>Troca de Óleo do Motor e Filtros</option>
+                    <option>Alinhamento e Balanceamento de Rodas</option>
+                    <option>Manutenção do Sistema de Freios</option>
+                    <option>Diagnóstico de Injeção Eletrônica via Scanner</option>
+                    <option>Substituição de Amortecedores e Suspensão</option>
+                    <option>Manutenção do Sistema de Arrefecimento</option>
+                    <option>Troca de Kit de Embreagem</option>
+                    <option>Higienização e Carga do Ar-Condicionado</option>
+                    <option>Revisão Elétrica (Troca de Bateria/Alternador)</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <div class="input-group">
+                    <label>Marca do Carro</label>
+                    <select id="marca" required>
+                        <option value="">Carregando marcas...</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Modelo</label>
+                    <select id="modelo" required disabled>
+                        <option value="">Selecione a marca primeiro</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-enviar">Confirmar Solicitação</button>
+            <p id="msgSucesso" class="success-message"></p>
+        </form>
+    </div>
+
+    <script src="js/agendamento.js"></script>
+</body>
+</html>

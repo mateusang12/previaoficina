@@ -1,10 +1,54 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Controle - Oficina dos Anjos</title>
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
+    <header class="navbar">
+        <div class="logo">Oficina dos Anjos - Painel Admin</div>
+        <button id="btnSair" class="btn-sair">Sair do Painel</button>
+    </header>
 
+    <main class="dashboard-container">
+        <section class="info-section">
+            <h2>Gerenciamento de Ordens Ativas (Pendentes / Em Andamento)</h2>
+            <table id="tabelaAtivos" class="admin-table">
+                <thead>
+                    <tr>
+                        <th>OS</th>
+                        <th>Cliente</th>
+                        <th>Carro</th>
+                        <th>Serviço</th>
+                        <th>Status</th>
+                        <th>Mecânico Atribuído</th>
+                        <th>Ações de Controle</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section class="info-section finalizados-section">
+            <h2>Histórico de Ordens Finalizadas</h2>
+            <table id="tabelaFinalizados" class="admin-table">
+                <thead>
+                    <tr>
+                        <th>OS</th>
+                        <th>Cliente</th>
+                        <th>Carro</th>
+                        <th>Serviço Executado</th>
+                        <th>Mecânico Responsável</th>
+                        <th>Comentário Técnico Encerramento</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="js/dashboard.js"></script>
 </body>
 </html>

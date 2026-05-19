@@ -4,24 +4,17 @@ namespace OficinaAPI.Data
 {
     public interface IOficinaRepo
     {
-        // Contrato para salvar qualquer alteração no banco
+        // --- Métodos de Clientes (Mantidos para não quebrar outras partes do sistema) ---
+        IEnumerable<Usuario> ObterTodosClientes();
+        void CriarCliente(Usuario cliente);
+        Usuario ObterClientePorId(int id);
+
+        // --- Métodos Novos de Ordens de Serviço (OS) ---
+        void CriarOS(OrdemServico os);
+        IEnumerable<OrdemServico> ObterTodasOS();
+        OrdemServico ObterOSPorId(int id);
+        void AtualizarOS(OrdemServico os);
+
         bool SaveChanges();
-
-        // Clientes
-        void CriarCliente(Cliente cliente);
-        IEnumerable<Cliente> ObterTodosClientes();
-        Cliente ObterClientePorId(int id);
-
-        // Veículos
-        void CriarVeiculo(Veiculo veiculo);
-        IEnumerable<Veiculo> ObterVeiculosPorCliente(int clienteId);
-
-        // Serviços
-        void CriarServico(Servico servico);
-        IEnumerable<Servico> ObterTodosServicos();
-
-        // Ordens de Serviço
-        void CriarOrdemServico(OrdemServico os);
-        OrdemServico ObterOrdemServicoPorId(int id);
     }
 }

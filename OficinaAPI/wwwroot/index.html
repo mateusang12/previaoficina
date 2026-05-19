@@ -3,30 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oficina Mecânica - Login Admin</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <title>Oficina dos Anjos - Home</title>
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
-    <div class="login-container">
-        <form id="loginForm" class="login-form">
-            <h2>Oficina Mecânica</h2>
-            <h3>Acesso Administrativo</h3>
 
-            <div class="input-group">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" required placeholder="admin@oficina.com">
+    <header class="navbar">
+        <div class="logo">Oficina dos Anjos</div>
+        <nav class="menu">
+            <a href="#quem-somos" class="menu-item">Quem Somos</a>
+            <a href="#locais" class="menu-item">Localidades Próximas</a>
+            <a href="agendamento.html" class="menu-item btn-agendar-menu">Agende uma Revisão</a>
+            <a href="login.html" class="menu-item login-link">Login</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        <section id="quem-somos" class="info-section">
+            <h1>Quem Somos</h1>
+            <p>Com mais de 15 anos de estrada, a <strong>Oficina dos Anjos</strong> nasceu da paixão por cuidar da segurança das famílias brasileiras. Somos especialistas em diagnósticos precisos, transparência total e atendimento de excelência.</p>
+        </section>
+
+        <section class="services-showcase">
+            <h2>Nossos Serviços Especializados</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <img src="http://googleusercontent.com/image_collection/image_retrieval/15281080811340185629_0" alt="Mecânica Geral">
+                    <div class="card-body">
+                        <h3>Mecânica Geral</h3>
+                        <p>Reparos em motores, câmbio e sistemas de transmissão complexos com peças originais.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="http://googleusercontent.com/image_collection/image_retrieval/3940644946017485905_0" alt="Troca de Óleo">
+                    <div class="card-body">
+                        <h3>Troca de Fluídos</h3>
+                        <p>Substituição de óleo de motor, fluidos de freio e arrefecimento monitorados por especialistas.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=400" alt="Injeção Eletrônica">
+                    <div class="card-body">
+                        <h3>Eletrônica Avançada</h3>
+                        <p>Diagnóstico via scanner automotivo para identificar e corrigir falhas eletrônicas invisíveis.</p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="input-group">
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" required placeholder="••••••••">
+        <section id="locais" class="info-section">
+            <h2>Localidades Próximas</h2>
+            <div class="locais-container">
+                <div class="local-item">📍 <strong>Matriz Centro:</strong> Av. Paulista, 1000 - São Paulo/SP</div>
+                <div class="local-item">📍 <strong>Unidade Sul:</strong> Rua das Flores, 50 - Curitiba/PR</div>
             </div>
+        </section>
+    </main>
 
-            <button type="submit" class="btn-login">Entrar</button>
-            <p id="mensagemErro" class="error-message"></p>
-        </form>
-    </div>
-
-    <script src="js/auth.js"></script>
 </body>
 </html>
